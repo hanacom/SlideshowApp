@@ -35,6 +35,7 @@ class ViewController: UIViewController {
     
     @IBAction func susumubutton(_ sender: Any) {
         
+        if timer == nil {
         if imagenumber == 3 {
             
             imagenumber = 1
@@ -44,17 +45,20 @@ class ViewController: UIViewController {
         
         
         showImage()
-        
+        }
 }
     
     
     @IBAction func modorubutton(_ sender: Any) {
+        
+        if timer == nil {
         if imagenumber == 1 {
             imagenumber = 3
         }else{
             imagenumber -= 1
         }
         showImage()
+        }
     }
     
     
@@ -67,14 +71,30 @@ class ViewController: UIViewController {
     @objc func updateTimer(timer: Timer) {
         self.timer_sec += 1
         self.timerLabel.text = String(timer_sec)
+        
+        if timer_sec == 2 {
+            timer_sec = 0
+            if imagenumber == 3 {
+               imagenumber = 1
+            }else{
+            imagenumber += 1
+            }
+            showImage()
+        }
     }
     
+    
+    
+    @IBOutlet weak var saiseiButton: UIButton!
     
     @IBAction func saiseibutton(_ sender: Any) {
         if self.timer == nil {
             self.timer = Timer.scheduledTimer(timeInterval: 1,target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
-            
+          saiseiButton.setTitle("停止", for: .normal)
+        
         }
+        
+      
     }
     
     
@@ -84,6 +104,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         imageView.image = UIImage(named: "dog1.jpg")
+        
     }
 
     override func didReceiveMemoryWarning() {
