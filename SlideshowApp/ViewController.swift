@@ -48,6 +48,35 @@ class ViewController: UIViewController {
 }
     
     
+    @IBAction func modorubutton(_ sender: Any) {
+        if imagenumber == 1 {
+            imagenumber = 3
+        }else{
+            imagenumber -= 1
+        }
+        showImage()
+    }
+    
+    
+    
+    var timer: Timer!
+    var timer_sec:Int = 0
+    
+    @IBOutlet weak var timerLabel: UILabel!
+    
+    @objc func updateTimer(timer: Timer) {
+        self.timer_sec += 1
+        self.timerLabel.text = String(timer_sec)
+    }
+    
+    
+    @IBAction func saiseibutton(_ sender: Any) {
+        if self.timer == nil {
+            self.timer = Timer.scheduledTimer(timeInterval: 1,target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+            
+        }
+    }
+    
     
     
     
