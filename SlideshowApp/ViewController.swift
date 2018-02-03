@@ -12,6 +12,9 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
     
+    
+    @IBOutlet weak var gazobutton: UIButton!
+    
     var imagenumber: Int = 1
     let image1: UIImage? = UIImage(named: "dog1")
     let image2: UIImage? = UIImage(named: "dog2")
@@ -37,7 +40,6 @@ class ViewController: UIViewController {
         
         if timer == nil {
         if imagenumber == 3 {
-            
             imagenumber = 1
         }else{
             imagenumber += 1
@@ -91,19 +93,45 @@ class ViewController: UIViewController {
         if self.timer == nil {
             self.timer = Timer.scheduledTimer(timeInterval: 1,target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
           saiseiButton.setTitle("停止", for: .normal)
+        }else{
+            self.timer.invalidate()
+            self.timer = nil
+            saiseiButton.setTitle("再生", for: .normal)
         
         }
-        
       
     }
     
+    @IBAction func unwind(_ segue: UIStoryboardSegue) {
+    }
     
+    
+
+    @IBAction func gazoButton(_ sender: Any) {
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // segueから遷移先のResultViewControllerを取得する
+        let resultViewController:ResultViewController = segue.destination as! ResultViewController
+        
+        if imageView.image == image1 {
+            resultViewController.image = image1
+        }
+        if imageView.image == image2 {
+            resultViewController.image = image2
+        }
+        if imageView.image == image3 {
+            resultViewController.image = image3
+        }
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         imageView.image = UIImage(named: "dog1.jpg")
+        
         
     }
 
