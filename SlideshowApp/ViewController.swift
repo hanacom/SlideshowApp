@@ -12,7 +12,9 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
     
+    @IBOutlet weak var susumuButton: UIButton!
     
+    @IBOutlet weak var modoruButton: UIButton!
     @IBOutlet weak var gazobutton: UIButton!
     
     var imagenumber: Int = 1
@@ -93,10 +95,14 @@ class ViewController: UIViewController {
         if self.timer == nil {
             self.timer = Timer.scheduledTimer(timeInterval: 1,target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
           saiseiButton.setTitle("停止", for: .normal)
+            susumuButton.isEnabled = false
+            modoruButton.isEnabled = false
         }else{
             self.timer.invalidate()
             self.timer = nil
             saiseiButton.setTitle("再生", for: .normal)
+            susumuButton.isEnabled = true
+            modoruButton.isEnabled = true
         
         }
       

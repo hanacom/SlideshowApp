@@ -137,7 +137,9 @@
                     <connections>
                         <outlet property="gazobutton" destination="dRJ-RP-g5S" id="xs1-TO-YJ1"/>
                         <outlet property="imageView" destination="pUL-GF-bE2" id="OWc-id-2Oy"/>
+                        <outlet property="modoruButton" destination="xHk-FY-ER3" id="RHv-5d-K7j"/>
                         <outlet property="saiseiButton" destination="NZd-EV-ycJ" id="GPP-jT-adw"/>
+                        <outlet property="susumuButton" destination="nBP-Ke-XmC" id="8YY-v9-neZ"/>
                         <outlet property="timerLabel" destination="gSS-dO-TcO" id="gVe-BR-V51"/>
                     </connections>
                 </viewController>
