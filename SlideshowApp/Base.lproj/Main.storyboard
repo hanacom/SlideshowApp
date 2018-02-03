@@ -18,6 +18,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog2" translatesAutoresizingMaskIntoConstraints="NO" id="BxV-R9-IRq">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="541"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MvI-Qp-xpo">
                                 <rect key="frame" x="0.0" y="541" width="320" height="27"/>
                                 <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -28,9 +31,6 @@
                                     <segue destination="7rm-bE-bby" kind="unwind" unwindAction="unwind:" id="QcW-zF-y57"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog2" translatesAutoresizingMaskIntoConstraints="NO" id="BxV-R9-IRq">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="541"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -91,18 +91,17 @@
                                     <action selector="saiseibutton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bPW-Us-Tvc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRJ-RP-g5S">
-                                <rect key="frame" x="0.0" y="116" width="320" height="202"/>
-                                <connections>
-                                    <action selector="gazoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gDr-eK-wzS"/>
-                                    <segue destination="LdL-jw-0aV" kind="show" id="inO-yK-ZGb"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xHk-FY-ER3">
                                 <rect key="frame" x="145" y="390" width="31" height="30"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
                                     <action selector="modorubutton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MkZ-Se-jS6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRJ-RP-g5S">
+                                <rect key="frame" x="0.0" y="116" width="320" height="202"/>
+                                <connections>
+                                    <segue destination="LdL-jw-0aV" kind="show" id="inO-yK-ZGb"/>
                                 </connections>
                             </button>
                         </subviews>

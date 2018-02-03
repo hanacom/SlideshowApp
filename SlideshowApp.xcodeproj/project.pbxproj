@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D1D587720267F2400572EEA /* dog1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9D1D587620267F2300572EEA /* dog1.jpg */; };
+		9D1D587920267F4200572EEA /* dog2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9D1D587820267F4100572EEA /* dog2.jpg */; };
+		9D1D587B20267F4A00572EEA /* dog3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9D1D587A20267F4A00572EEA /* dog3.jpg */; };
 		9D3B831220209DB100740CA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3B831120209DB100740CA6 /* AppDelegate.swift */; };
 		9D3B831420209DB100740CA6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3B831320209DB100740CA6 /* ViewController.swift */; };
 		9D3B831720209DB100740CA6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D3B831520209DB100740CA6 /* Main.storyboard */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9D1D587620267F2300572EEA /* dog1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dog1.jpg; sourceTree = "<group>"; };
+		9D1D587820267F4100572EEA /* dog2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dog2.jpg; sourceTree = "<group>"; };
+		9D1D587A20267F4A00572EEA /* dog3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dog3.jpg; sourceTree = "<group>"; };
 		9D3B830E20209DB100740CA6 /* SlideshowApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlideshowApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D3B831120209DB100740CA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D3B831320209DB100740CA6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -42,6 +48,9 @@
 			children = (
 				9D3B831020209DB100740CA6 /* SlideshowApp */,
 				9D3B830F20209DB100740CA6 /* Products */,
+				9D1D587620267F2300572EEA /* dog1.jpg */,
+				9D1D587820267F4100572EEA /* dog2.jpg */,
+				9D1D587A20267F4A00572EEA /* dog3.jpg */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,7 +136,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D3B831C20209DB100740CA6 /* LaunchScreen.storyboard in Resources */,
+				9D1D587920267F4200572EEA /* dog2.jpg in Resources */,
 				9D3B831920209DB100740CA6 /* Assets.xcassets in Resources */,
+				9D1D587720267F2400572EEA /* dog1.jpg in Resources */,
+				9D1D587B20267F4A00572EEA /* dog3.jpg in Resources */,
 				9D3B831720209DB100740CA6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

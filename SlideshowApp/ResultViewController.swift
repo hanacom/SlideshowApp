@@ -17,6 +17,26 @@ class ResultViewController: UIViewController {
     
     
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // segueから遷移先のResultViewControllerを取得する
+        let viewController:ViewController = segue.destination as! ViewController
+        if imageView2.image == UIImage(named: "dog1.jpg") {
+            viewController.imageView.image = UIImage(named: "dog1.jpg")
+            
+        }
+        if imageView2.image == UIImage(named: "dog2.jpg") {
+            viewController.imageView.image = UIImage(named: "dog2.jpg")
+        }
+        
+        if imageView2.image == UIImage(named: "dog3.jpg") {
+            viewController.imageView.image = UIImage(named: "dog3.jpg")
+        }
+        
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

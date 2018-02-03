@@ -10,13 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+   
+    
     @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet weak var susumuButton: UIButton!
     
     @IBOutlet weak var modoruButton: UIButton!
-    @IBOutlet weak var gazobutton: UIButton!
     
+    @IBOutlet weak var gazobutton: UIButton!
+    var kaeriimage: UIImage? = nil
     var imagenumber: Int = 1
     let image1: UIImage? = UIImage(named: "dog1")
     let image2: UIImage? = UIImage(named: "dog2")
@@ -36,7 +39,6 @@ class ViewController: UIViewController {
         }
     }
 
-    
     
     @IBAction func susumubutton(_ sender: Any) {
         
@@ -113,31 +115,32 @@ class ViewController: UIViewController {
     
     
 
-    @IBAction func gazoButton(_ sender: Any) {
-        
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // segueから遷移先のResultViewControllerを取得する
         let resultViewController:ResultViewController = segue.destination as! ResultViewController
         
         if imageView.image == image1 {
             resultViewController.image = image1
+            
+            
         }
         if imageView.image == image2 {
             resultViewController.image = image2
+            
         }
         if imageView.image == image3 {
             resultViewController.image = image3
+            
         }
     }
     
     
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        imageView.image = UIImage(named: "dog1.jpg")
-        
+      imageView.image = image1
         
     }
 
